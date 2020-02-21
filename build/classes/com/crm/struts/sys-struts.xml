@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="mysys" namespace="/pages_sys" extends="publicapp">
+		<action name="sys_role" class="com.crm.action.SysRoleAction">
+			<result>sys_role_list.jsp</result>
+			<result name="add" type="redirectAction">sys_role</result>
+		</action>
+		<action name="sys_login" class="com.crm.action.SysLoginAction">
+			
+		</action>
+	</package>
+</struts>

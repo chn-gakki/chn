@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="myparam" location="10,10" size="525,245">
+    <action name="param_city" location="65,58" size="150,40" />
+    <action name="param_sys" location="65,152" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="param_type_lists.jsp" />
+      </result>
+      <result name="add" />
+    </action>
+    <action name="param_systype" location="310,162" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="param_type_lists.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="param_type_lists.jsp" path="param_type_lists.jsp" location="320,297" size="150,55" />
+</Struts2Diagram>
+

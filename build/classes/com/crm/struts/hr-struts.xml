@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="myhr" namespace="/pages_hr" extends="publicapp">
+		
+		<action name="hr_posi" class="com.crm.action.HrPositionAction">
+			<result>public_hr_position.jsp</result>
+			<result name="add" type="redirectAction">hr_posi</result>
+			<result name="delete" type="redirectAction">hr_posi</result>
+			<result name="update" type="redirectAction">hr_posi</result>
+			<result name="findOne">public_hr_position_edit.jsp</result>
+			<result name="trash">/pages_sys/trash_hr_position.jsp</result>
+			
+		</action>
+		
+		<action name="hr_post" class="com.crm.action.HrPostAction">
+			<result>public_hr_post.jsp</result>
+			<result name="add" type="redirectAction">hr_post</result>
+			<result name="delete" type="redirectAction">hr_post</result>
+			<result name="update" type="redirectAction">hr_post</result>
+			<result name="findone">public_hr_post_edit.jsp</result>
+			<result name="trash">/pages_sys/trash_hr_post.jsp</result>
+		</action>
+
+		<action name="hr_dep" class="com.crm.action.HrDepartmentAction">
+			<result>public_hr_department.jsp</result>
+			<result name="add" type="redirectAction">hr_dep</result>
+			<result name="delete" type="redirectAction">hr_dep</result>
+			<result name="update" type="redirectAction">hr_dep</result>
+			<result name="findOne">public_hr_department_edit.jsp</result>
+			<result name="trash">/pages_sys/trash_hr_department.jsp</result>
+		</action>
+
+		<action name="hr_emp" class="com.crm.action.HrEmployeeAction">	
+			<result name="deletefalse" type="redirectAction">hr_emp</result>
+			<result name="show">public_hr_employee.jsp</result>
+			<result name="findone">public_hr_employee_edit.jsp</result>
+			<result name="update" type="redirectAction">hr_emp</result>
+			<result name="add" type="redirectAction">hr_emp</result>
+			<result name="trash">/pages_sys/trash_hr_employee.jsp</result>
+			<result name="uphead" type="redirect">emp.jsp</result>
+		</action>
+		
+	</package>
+</struts>

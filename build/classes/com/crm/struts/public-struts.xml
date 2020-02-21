@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="mypublic" namespace="/pages_public" extends="publicapp">
+		<action name="pub_notice" class="com.crm.action.PublicNoticeAction">
+			<result>public_notice.jsp</result>
+			<result name="toNoticeEdit">public_notice_edit.jsp</result>
+			<result name="add" type="redirectAction">pub_notice</result>
+			<result name="update" type="redirectAction">pub_notice</result>
+			<result name="del" type="redirectAction">pub_notice</result>
+			<result name="show">public_notice_list.jsp</result>
+		</action>
+		<action name="pub_news" class="com.crm.action.PublicNewsAction">
+			<result>public_new_list.jsp</result>
+			<result name="ones">public_new_update.jsp</result>
+			<result name="up_ok" type="redirectAction">pub_news</result>
+			<result name="show">public_new.jsp</result>
+		</action>
+	</package>
+</struts>

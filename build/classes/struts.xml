@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- BEGIN 拦截器 -->
+	<package name="publicapp" abstract="true" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="isloginStack" class="com.crm.tools.IsLoginInterceptor"></interceptor>
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="isloginStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		
+		<global-results>
+			<result name="error" type="redirect">/login.jsp</result>
+			<result name="ajax">/ajax.jsp</result>
+		</global-results>
+	</package>
+	<!-- END 拦截器 -->
+	
+	
+	<package name="myapp" namespace="/" extends="struts-default">
+	
+		<global-results>
+			<result name="error" type="redirect">/login.jsp</result>
+			<result name="ajax">/ajax.jsp</result>
+		</global-results>
+		
+		<action name="hr_emp" class="hrEmployeeAction">
+			<result name="login" type="redirect">/index.jsp</result>
+			<result name="loginerr">/login.jsp</result>
+		</action>
+	</package>
+	
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.multipart.maxSize" value="5242880"></constant>
+	<include file="com/crm/struts/crm-struts.xml"></include>
+	<include file="com/crm/struts/hr-struts.xml"></include>
+	<include file="com/crm/struts/mail-struts.xml"></include>
+	<include file="com/crm/struts/param-struts.xml"></include>
+	<include file="com/crm/struts/personal-struts.xml"></include>
+	<include file="com/crm/struts/public-struts.xml"></include>
+	<include file="com/crm/struts/sys-struts.xml"></include>
+	
+</struts>

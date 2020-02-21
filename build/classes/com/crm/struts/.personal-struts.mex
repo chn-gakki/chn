@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="mypersonal" location="10,10" size="347,229">
+    <action name="person_calen" location="22,35" size="160,69" />
+  </package>
+</Struts2Diagram>
+

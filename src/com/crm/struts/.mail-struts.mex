@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="mymail" location="197,40" size="469,286">
+    <action name="mail_flow" location="43,46" size="205,40" />
+    <action name="mail_atta" location="43,98" size="203,46" />
+  </package>
+</Struts2Diagram>
+

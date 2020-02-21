@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="mycrm" namespace="/pages_crm" extends="publicapp">
+		
+		<!-- begin crm_prod,crm_cate -->
+		<action name="crm_prod" class="com.crm.action.CrmProductAction">
+			<result>crm_product_list.jsp</result>
+			<result name="findone">crm_product_update.jsp</result>
+			<result name="toadd">crm_product_add.jsp</result>
+			<result name="update" type="redirectAction">crm_prod</result>
+			<result name="delfalse" type="redirectAction">crm_prod</result>
+			<result name="delete" type="redirectAction">crm_prod</result>
+			<result name="add" type="redirectAction">crm_prod</result>
+			<result name="trash">/pages_sys/trash_product_list.jsp</result>
+		</action>
+		
+		<action name="crm_cate" class="com.crm.action.CrmProductCategoryAction">
+			<result>crm_productcate_list.jsp</result>
+			<result name="trash">/pages_sys/trash_productcate_list.jsp</result>
+		</action>
+		<!-- end -->
+		
+		<!-- begin ma_order,ma_contr,ma_detail -->
+		<action name="ma_order" class="com.crm.action.CrmOrderAction">
+			<result>crm_order_list.jsp</result>
+			<result name="findone">crm_order_update.jsp</result>
+			<result name="update" type="redirectAction">ma_order</result>
+			<result name="add" type="redirectAction">ma_order</result>
+			<result name="delete" type="redirectAction">ma_order</result>
+			<result name="trash">/pages_sys/trash_order_list.jsp</result>
+		</action>
+		
+		<action name="ma_contr" class="com.crm.action.CrmContractAction">
+			<result>crm_contract_list.jsp</result>
+			<result name="findone">crm_contract_update.jsp</result>
+			<result name="update" type="redirectAction">ma_contr</result>
+			<result name="add" type="redirectAction">ma_contr</result>
+			<result name="delete" type="redirectAction">ma_contr</result>
+			<result name="trash">/pages_sys/trash_contract_list.jsp</result>
+		</action>
+		
+		<action name="ma_detail" class="com.crm.action.CrmOrderDetailsAction">
+			
+		</action>
+		
+		<action name="crm_cust" class="com.crm.action.CrmCustomerAction">
+			<result>crm_cus_list.jsp</result>
+			<result name="toupdate">crm_cus_update.jsp</result>
+			<result name="add" type="redirectAction">crm_cust</result>
+			<result name="update" type="redirectAction">crm_cust</result>
+			<result name="delete" type="redirectAction">crm_cust</result>
+			<result name="trash">/pages_sys/trash_cus_list.jsp</result>
+		</action>
+		<!-- end -->
+		<action name="crm_cont" class="com.crm.action.CrmContactAction">
+			<result>crm_contact_list.jsp</result>
+			<result name="add" type="redirectAction">crm_cont</result>
+			<result name="findone">crm_contact_update.jsp</result>
+			<result name="update" type="redirectAction">crm_cont</result>
+			<result name="delete" type="redirectAction">crm_cont</result>
+			<result name="trash">/pages_sys/trash_contact_list.jsp</result>
+		</action>
+		<action name="crm_follow" class="com.crm.action.CrmFollowAction">
+			<result name="findbycusid">crm_cus_follow.jsp</result>
+			<result name="add" type="redirectAction">crm_follow</result>
+			<result name="findall">crm_follow_list.jsp</result>
+			<result name="trash">/pages_sys/trash_follow_list.jsp</result>
+			<result name="delete" type="redirectAction">crm_follow</result>
+		</action>
+		<action name="crm_receive" class="com.crm.action.CrmReceiveAction">
+			<result name="findbyorderid">crm_order_recei.jsp</result>
+			<result name="findorder">crm_receive_add.jsp</result>
+			<result name="findreceive">crm_receive_update.jsp</result>
+			<result name="update" type="redirectAction" >crm_receive</result>
+			<result name="add" type="redirectAction" >crm_receive</result>
+			<result name="delete" type="redirectAction" >crm_receive</result>
+			<result name="findall">crm_receive_list.jsp</result>
+			<result name="trash">/pages_sys/trash_receive_list.jsp</result>
+		</action>
+
+		<action name="crm_invoice" class="com.crm.action.CrmInvoiceAction">
+			<result>crm_order_invoice.jsp</result>
+			<result name="findall">crm_invoice_list.jsp</result>
+			<result name="findadd">crm_invoice_add.jsp</result>
+			<result name="findupdate">crm_invoice_update.jsp</result>
+			<result name="add" type="redirectAction">crm_invoice</result>
+			<result name="update" type="redirectAction">crm_invoice</result>
+			<result name="delete" type="redirectAction">crm_invoice</result>
+			<result name="trash">/pages_sys/trash_invoice_list.jsp</result>
+		</action>
+	</package>
+</struts>

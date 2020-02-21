@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="mysys" location="10,10" size="346,311">
+    <action name="sys_role" location="18,27" size="127,40" />
+    <action name="sys_login" location="16,76" size="121,59" />
+  </package>
+</Struts2Diagram>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="mypersonal" namespace="/pages_personal" extends="publicapp">
+
+	<action name="person_calen" class="com.crm.action.PersonalEventAction">
+		
+	</action>
+	</package>
+</struts>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="mycrm" location="226,108" size="559,959">
+    <action name="crm_prod" location="40,45" size="150,167">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="crm_product_list.jsp" />
+      </result>
+      <result name="findone">
+        <resourceEdge source="findone" routing="0" target="crm_product_update.jsp" />
+      </result>
+      <result name="toadd">
+        <resourceEdge source="toadd" routing="0" target="crm_product_add.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="crm_prod" namespace="/pages_crm" />
+      </result>
+      <result name="delfalse">
+        <resourceEdge source="delfalse" routing="0" target="crm_prod" namespace="/pages_crm" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="crm_prod" namespace="/pages_crm" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="crm_prod" namespace="/pages_crm" />
+      </result>
+    </action>
+    <action name="crm_cate" location="376,52" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="crm_productcate_list.jsp" />
+      </result>
+    </action>
+    <action name="ma_order" location="373,255" size="150,125">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="crm_order_list.jsp" />
+      </result>
+      <result name="findone">
+        <resourceEdge source="findone" routing="0" target="crm_order_update.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="ma_order" namespace="/pages_crm" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="ma_order" namespace="/pages_crm" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="ma_order" namespace="/pages_crm" />
+      </result>
+    </action>
+    <action name="ma_contr" location="34,642" size="150,125">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="crm_contract_list.jsp" />
+      </result>
+      <result name="findone">
+        <resourceEdge source="findone" routing="0" target="crm_contract_update.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="ma_contr" namespace="/pages_crm" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="ma_contr" namespace="/pages_crm" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="ma_contr" namespace="/pages_crm" />
+      </result>
+    </action>
+    <action name="ma_detail" location="35,574" size="150,40" />
+    <action name="crm_cust" location="37,246" size="150,125">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="crm_cus_list.jsp" />
+      </result>
+      <result name="toupdate">
+        <resourceEdge source="toupdate" routing="0" target="crm_cus_update.jsp" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="crm_cust" namespace="/pages_crm" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="crm_cust" namespace="/pages_crm" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="crm_cust" namespace="/pages_crm" />
+      </result>
+    </action>
+    <action name="crm_cont" location="36,414" size="150,125">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="crm_contact_list.jsp" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="crm_cont" namespace="/pages_crm" />
+      </result>
+      <result name="findone">
+        <resourceEdge source="findone" routing="0" target="crm_contact_update.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="crm_cont" namespace="/pages_crm" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="crm_cont" namespace="/pages_crm" />
+      </result>
+    </action>
+    <action name="crm_follow" location="372,149" size="151,83">
+      <result name="findbycusid">
+        <resourceEdge source="findbycusid" routing="0" target="crm_cus_follow.jsp" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="crm_follow" namespace="/pages_crm" />
+      </result>
+      <result name="findall" />
+    </action>
+    <action name="crm_receive" location="32,787" size="150,167">
+      <result name="findbyorderid" />
+      <result name="findorder" />
+      <result name="findreceive" />
+      <result name="update" />
+      <result name="add" />
+      <result name="delete" />
+      <result name="findall" />
+    </action>
+    <action name="crm_invoice" location="374,407" size="150,151" />
+  </package>
+  <webResource name="crm_product_list.jsp" path="crm_product_list.jsp" location="816,220" size="150,55" />
+  <webResource name="crm_product_update.jsp" path="crm_product_update.jsp" location="817,101" size="150,55" />
+  <webResource name="crm_product_add.jsp" path="crm_product_add.jsp" location="11,220" size="150,55" />
+  <webResource name="crm_productcate_list.jsp" path="crm_productcate_list.jsp" location="816,395" size="150,55" />
+  <webResource name="crm_order_list.jsp" path="crm_order_list.jsp" location="819,919" size="150,55" />
+  <webResource name="crm_order_update.jsp" path="crm_order_update.jsp" location="816,710" size="150,55" />
+  <webResource name="crm_contract_list.jsp" path="crm_contract_list.jsp" location="11,710" size="150,55" />
+  <webResource name="crm_contract_update.jsp" path="crm_contract_update.jsp" location="13,867" size="150,55" />
+  <webResource name="crm_cus_list.jsp" path="crm_cus_list.jsp" location="11,325" size="150,55" />
+  <webResource name="crm_cus_update.jsp" path="crm_cus_update.jsp" location="11,430" size="150,55" />
+  <webResource name="crm_cus_follow.jsp" path="crm_cus_follow.jsp" location="10,502" size="150,55" />
+  <webResource name="crm_contact_list.jsp" path="crm_contact_list.jsp" location="12,800" size="150,55" />
+  <webResource name="crm_contact_update.jsp" path="crm_contact_update.jsp" location="11,941" size="150,55" />
+  <webResource name="crm_follow_list.jsp" path="crm_follow_list.jsp" location="821,997" size="150,55" />
+</Struts2Diagram>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="mymail" namespace="/pages_mail" extends="publicapp">
+	
+	
+	<action name="mail_flow" class="com.crm.action.MailFlowAction">
+		<result name="del" type="redirect">mail_flow.jsp</result>
+	</action>
+	
+	<action name="mail_atta" class="com.crm.action.MailAttachmentAction">
+		<param name="uploadDir">/main_pages/mailUploadFiles</param>
+		<result name="success" type="stream">
+			<param name="contentType">application/octet-stream</param>
+			<param name="inputName">inputStream</param>
+			<param name="contentDisposition">attachment;filename="${downFileName}"</param>
+        </result>
+	</action>
+	
+	</package>
+</struts>
